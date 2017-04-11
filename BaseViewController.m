@@ -23,6 +23,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.tabBar.translucent = NO;
+    
     [self createViewController];
     
 
@@ -60,7 +61,10 @@
                         unimage:(UIImage*)images
                           title:(NSString*)title{
     
-    MyNavViewController *naV =[[MyNavViewController alloc]init];
+    
+        MyNavViewController *naV =[[MyNavViewController alloc]initWithRootViewController:viewController];
+    
+    
     naV.title = title;
     naV.tabBarItem.image = images;
     naV.tabBarItem.selectedImage = image;

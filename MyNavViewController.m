@@ -17,6 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self SetUpNaviagtionBar];
+    
 
 }
 /**
@@ -25,13 +26,15 @@
 -(void)SetUpNaviagtionBar{
     
     UINavigationBar *appearance =[UINavigationBar appearance];
-    [appearance setBackgroundColor:[UIColor orangeColor]];
+    [appearance setBackgroundColor:[UIColor redColor]];
+    
+    [appearance setBarTintColor:[UIColor redColor]];//IOS7 之后都用这个方法
+    
     
     NSMutableDictionary *textAtt =[NSMutableDictionary dictionary];
     textAtt[NSForegroundColorAttributeName] = [UIColor whiteColor];
         
     [appearance setTitleTextAttributes:textAtt];
-    
     
 }
 - (void)didReceiveMemoryWarning {

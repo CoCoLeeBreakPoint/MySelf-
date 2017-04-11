@@ -1,24 +1,23 @@
 //
-//  OneViewController.m
+//  FiveViewController.m
 //  MySelf框架
 //
-//  Created by cocolee on 2017/4/10.
+//  Created by cocolee on 2017/4/11.
 //  Copyright © 2017年 TR. All rights reserved.
 //
 
-#import "OneViewController.h"
 #import "FiveViewController.h"
 
-@interface OneViewController ()
+@interface FiveViewController ()
 
 @end
 
-@implementation OneViewController
+@implementation FiveViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-
+    self.view.backgroundColor =[UIColor orangeColor];
     
     UIButton *btn =[UIButton buttonWithType:UIButtonTypeCustom];
     btn.frame = CGRectMake(10, 200, 50, 50);
@@ -28,12 +27,17 @@
     [self.view addSubview:btn];
 }
 
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [self.navigationController setNavigationBarHidden:YES];
+}
 -(void)GO:(id)sender{
     
-    FiveViewController *fi =[[FiveViewController alloc]init];
-    fi.hidesBottomBarWhenPushed = YES;
+    sixViewController *fi =[[sixViewController alloc]init];
+//    fi.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:fi animated:YES];
 }
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
